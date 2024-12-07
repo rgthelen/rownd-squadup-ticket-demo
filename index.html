@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rownd Authentication Festival</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        festival: {
+                            primary: "#FF4081",
+                            secondary: "#7C4DFF",
+                            accent: "#FFD700",
+                        },
+                    },
+                    backgroundImage: {
+                        'festival-gradient': 'linear-gradient(to bottom, #FF4081, #7C4DFF)',
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="min-h-screen bg-festival-gradient">
+        <nav class="bg-gradient-to-r from-festival-primary/90 to-festival-secondary/90 backdrop-blur-sm fixed w-full z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <div class="flex-shrink-0">
+                        <span class="text-white font-bold text-xl">RAF 2024</span>
+                    </div>
+                    <div class="flex space-x-4">
+                        <button class="nav-button">Home</button>
+                        <button class="nav-button">Schedule</button>
+                        <button class="nav-button">Artists</button>
+                        <button class="nav-button highlight" onclick="handleTicketsClick()">My Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="mx-auto max-w-7xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-6xl font-bold text-white mb-6">
+                    Rownd Authentication Festival
+                </h1>
+                <p class="text-2xl text-white/90 max-w-2xl mx-auto mb-8">
+                    User management, authentication, and delight in a few lines of code
+                </p>
+                <p class="text-xl text-white/80 max-w-2xl mx-auto mb-8">
+                    Partnership with <a href="https://squadup.com" class="text-festival-accent hover:underline">SquadUp</a> to bring the simplest ticket experience in the world
+                </p>
+                <div class="inline-block bg-festival-accent text-gray-900 px-6 py-3 rounded-full font-bold text-lg hover:bg-white transition-colors cursor-pointer">
+                    Get Your Tickets Now
+                </div>
+            </div>
+
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Ticket Cards -->
+                <div class="ticket-card">
+                    <h3 class="text-2xl font-bold text-festival-primary mb-4">General Admission</h3>
+                    <div class="text-3xl font-bold mb-6 text-gray-900">$299</div>
+                    <ul class="space-y-3">
+                        <li class="perk-item">✦ 3-day festival access</li>
+                        <li class="perk-item">✦ Basic authentication features</li>
+                        <li class="perk-item">✦ Access to main stages</li>
+                        <li class="perk-item">✦ Mobile ticket management</li>
+                    </ul>
+                </div>
+
+                <div class="ticket-card">
+                    <h3 class="text-2xl font-bold text-festival-primary mb-4">VIP Access</h3>
+                    <div class="text-3xl font-bold mb-6 text-gray-900">$599</div>
+                    <ul class="space-y-3">
+                        <li class="perk-item">✦ Premium festival access</li>
+                        <li class="perk-item">✦ Advanced authentication demos</li>
+                        <li class="perk-item">✦ VIP viewing areas</li>
+                        <li class="perk-item">✦ Exclusive workshop access</li>
+                        <li class="perk-item">✦ Priority support</li>
+                    </ul>
+                </div>
+
+                <div class="ticket-card">
+                    <h3 class="text-2xl font-bold text-festival-primary mb-4">Backstage Pass</h3>
+                    <div class="text-3xl font-bold mb-6 text-gray-900">$999</div>
+                    <ul class="space-y-3">
+                        <li class="perk-item">✦ All-access festival pass</li>
+                        <li class="perk-item">✦ Behind-the-scenes tours</li>
+                        <li class="perk-item">✦ 1-on-1 with Rownd engineers</li>
+                        <li class="perk-item">✦ Custom integration support</li>
+                        <li class="perk-item">✦ VIP lounge access</li>
+                        <li class="perk-item">✦ Exclusive merchandise</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center">
+                <h2 class="text-4xl font-bold text-white mb-8">Why Choose Rownd?</h2>
+                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div class="feature-card">
+                        <h3 class="text-lg font-medium text-gray-900 flex items-center gap-2">
+                            🎯 User-Centric
+                        </h3>
+                        <div class="mt-2 text-gray-600">
+                            <p>We give your users and customers the exact experience they need, when they need it, every time.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3 class="text-lg font-medium text-gray-900 flex items-center gap-2">
+                            💡 Simple Integration
+                        </h3>
+                        <div class="mt-2 text-gray-600">
+                            <p>Add powerful authentication and user management with just a few lines of code.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <h3 class="text-lg font-medium text-gray-900 flex items-center gap-2">
+                            🤝 Trusted Partners
+                        </h3>
+                        <div class="mt-2 text-gray-600">
+                            <p>Partnered with industry leaders like SquadUp to deliver seamless experiences.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-white/80">
+                    <p>Visit <a href="https://rownd.io" class="text-festival-accent hover:underline">rownd.io</a> or 
+                    <a href="https://squadup.com" class="text-festival-accent hover:underline">squadup.com</a> for more info.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script>
+        !function () { 
+          var e = window._rphConfig = window._rphConfig || [];
+          let t = window.localStorage.getItem("rph_base_url_override") || "https://hub.rownd.io"; e.push(["setBaseUrl", t]);
+          var r = document, s = r.createElement("script"), m = r.createElement("script"), a = r.getElementsByTagName("script")[0];
+          s.type = "text/javascript", s.noModule = !0, s.async = !0, s.src = t + "/static/scripts/rph.js", a.parentNode.insertBefore(s, a);
+          m.type = "module", m.async = !0, m.src = t + "/static/scripts/rph.mjs", a.parentNode.insertBefore(m, a);
+        } ();
+        _rphConfig.push(["setAppKey", "key_fbp3arnk3ots40ef54qkemdb" ]);
+    </script
+    
+</body>
+</html>
