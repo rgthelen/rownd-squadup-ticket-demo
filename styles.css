@@ -21,9 +21,10 @@ body {
 /* Navigation */
 .nav-button {
     padding: 0.5rem 1rem;
+    border-radius: 9999px;
     font-weight: 500;
+    transition: all 0.2s ease;
     color: white;
-    transition: all 0.2s;
 }
 
 .nav-button:hover {
@@ -33,6 +34,13 @@ body {
 .nav-button.highlight {
     background-color: #FFD700;
     color: #111827;
+    transition: all 0.2s ease;
+}
+
+.nav-button.highlight:hover {
+    background-color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -59,21 +67,74 @@ body {
 
 /* Cards */
 .ticket-card {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95) !important;
     border-radius: 0.5rem;
     border: 1px solid rgba(255, 64, 129, 0.2);
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: all 0.3s ease;
     width: 100%;
+    cursor: pointer;
+}
+
+.ticket-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-card h3 {
+    color: #FF4081 !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    transition: color 0.2s ease;
+}
+
+.ticket-card .price {
+    color: #111827 !important;
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s ease;
+}
+
+.perk-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4B5563 !important;
+    transition: color 0.2s ease;
 }
 
 .feature-card {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.95) !important;
     border-radius: 0.5rem;
     border: 1px solid #e5e7eb;
     padding: 1.5rem;
     width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h3 {
+    color: #111827 !important;
+    font-size: 1.125rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.feature-card p {
+    color: #4B5563 !important;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease;
 }
 
 /* Grid */
@@ -92,11 +153,43 @@ body {
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     .feature-card {
-        background-color: rgba(31, 41, 55, 0.9);
+        background-color: rgba(31, 41, 55, 0.9) !important;
         border-color: #374151;
     }
 
+    .feature-card:hover {
+        background-color: rgba(31, 41, 55, 0.95) !important;
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .feature-card h3 {
+        color: white !important;
+    }
+
+    .feature-card p {
+        color: #D1D5DB !important;
+    }
+
     .ticket-card {
-        background-color: rgba(31, 41, 55, 0.9);
+        background-color: rgba(31, 41, 55, 0.9) !important;
+    }
+
+    .ticket-card:hover {
+        background-color: rgba(31, 41, 55, 0.95) !important;
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .ticket-card h3 {
+        color: #FFD700 !important;
+    }
+
+    .ticket-card .price,
+    .ticket-card .text-gray-900 {
+        color: white !important;
+        opacity: 1 !important;
+    }
+
+    .perk-item {
+        color: #D1D5DB !important;
     }
 } 
