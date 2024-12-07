@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Rownd Authentication Festival</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,25 +16,25 @@
                             accent: "#FFD700",
                         },
                     },
-                    backgroundImage: {
-                        'festival-gradient': 'linear-gradient(to bottom, #FF4081, #7C4DFF)',
-                    },
                 }
             }
         }
     </script>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
 </head>
-<body>
-    <div class="min-h-screen bg-festival-gradient">
-        <nav class="bg-gradient-to-r from-festival-primary/90 to-festival-secondary/90 backdrop-blur-sm fixed w-full z-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<body class="overflow-x-hidden">
+    <div class="relative w-full min-h-screen bg-gradient-to-b from-festival-primary to-festival-secondary">
+        <!-- Navigation -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-festival-primary/90 to-festival-secondary/90 backdrop-blur-sm">
+            <div class="container mx-auto px-4">
                 <div class="flex items-center justify-between h-16">
-                    <div class="flex-shrink-0">
-                        <span class="text-white font-bold text-xl">RAF 2024</span>
+                    <span class="text-white font-bold text-xl">RAF 2024</span>
+                    <div class="md:hidden">
+                        <button class="nav-button highlight" onclick="handleTicketsClick()">
+                            My Tickets
+                        </button>
                     </div>
-                    <div class="flex space-x-4">
+                    <div class="hidden md:flex space-x-4">
                         <button class="nav-button">Home</button>
                         <button class="nav-button">Schedule</button>
                         <button class="nav-button">Artists</button>
@@ -44,7 +44,8 @@
             </div>
         </nav>
 
-        <main class="mx-auto max-w-7xl px-4 pt-24 pb-16 sm:px-6 lg:px-8">
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 pt-20 pb-8">
             <div class="text-center mb-16">
                 <h1 class="text-6xl font-bold text-white mb-6">
                     Rownd Authentication Festival
@@ -137,8 +138,6 @@
             </div>
         </main>
     </div>
-
-
     <script>
         !function () { 
           var e = window._rphConfig = window._rphConfig || [];
@@ -148,7 +147,7 @@
           m.type = "module", m.async = !0, m.src = t + "/static/scripts/rph.mjs", a.parentNode.insertBefore(m, a);
         } ();
         _rphConfig.push(["setAppKey", "key_fbp3arnk3ots40ef54qkemdb" ]);
-    </script
-    
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>

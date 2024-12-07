@@ -1,6 +1,8 @@
 // Initialize Rownd
 window.rownd = window.rownd || [];
 
+
+
 // Handle tickets button click
 function handleTicketsClick() {
     if (window.rownd?.squadUp?.yourTickets) {
